@@ -5,27 +5,37 @@
   "description": "超级浏览器历史插件,帮你记录上网获得的知识",
   "homepage_url": "https://github.com/wzdxt/superhistory-chrome",
   "browser_action": {
-    "default_icon": "images/icons/icon19offline.png"
-    ,"default_title": "超级历史"
-    ,"default_popup": "view/popup/offline.html"
-  }
-  ,"icons": {
+    "default_icon": "images/icons/icon19.png",
+    "default_title": "超级历史",
+    "default_popup": "view/popup/online.html"
+  },
+  "icons": {
     "16": "images/icons/icon16.png",
     "48": "images/icons/icon48.png",
     "128": "images/icons/icon128.png"
-  }
-  ,"permissions": [
+  },
+  "permissions": [
     "http://*.x-history.top/*",
     "http://*/*"
-  ]
-  ,"content_scripts": [
+  ],
+  "content_scripts": [
     {
-      "matches": ["*://*/*"],
-      "js": ["js/lib/jquery.js", "js/utils.js", "js/main.js"]
+      "matches": [
+        "*://*/*"
+      ],
+      "js": [
+        "js/lib/jquery.js",
+        "js/utils.js",
+        "js/main.js"
+      ]
     }
-  ]
-  ,"background": {
-    "scripts": ["js/lib/jquery.js", "js/lib/jquery_ujs.js", "js/background.js"]
+  ],
+  "background": {
+    "scripts": [
+      "js/lib/jquery.js",
+      "js/lib/jquery_ujs.js",
+      "js/background.js"
+    ]
   }
 }
 

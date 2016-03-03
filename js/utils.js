@@ -1,3 +1,3 @@
-var log = function(msg) {
-    console.log(msg);
+var log = function (msg) {
+  console.log(msg);
 };

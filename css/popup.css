@@ -1,1 +1,20 @@
-body
+body {
+  width: 200px;
+  height: 150px;
+}
+body.offline {
+  background: mintcream;
+}
+.btn {
+  padding: 1px 8px;
+}
+.btn.login {
+  background: royalblue;
+  color: white;
+}
+.btn.knowledge {
+  background: royalblue;
+  color: white;
+}
+
+
