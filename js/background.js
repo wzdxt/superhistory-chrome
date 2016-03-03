@@ -26,5 +26,20 @@ chrome.runtime.onMessage.addListener(function(request, sender, callback) {
 
         xhttp.send(request.data);
         return true; // prevents the callback from being called too early on return
+    } else if (request.action == 'online') {
+        updateOnline(request.online);
     }
 });
+
+function updateOnline(online) {
+    if (online) {
+        chrome.browserAction.setIcon({path:"images/icons/icon19.png"});
+        chrome.browserAction.setPopup({popup:"view/popup/online.html"});
+    } else {
+        chrome.browserAction.setIcon({path:"images/icons/icon19offline.png"});
+        chrome.browserAction.setPopup({popup:"view/popup/offline.html"});
+    }
+}
+
+
+
